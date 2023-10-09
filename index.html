@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java script Projects</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/css/styles.css">
+</head>
+
+<body >
+    <div class="container-1">
+
+        <h2>Challenge 1 :Your age in days</h2>
+        <div class="flex-box-container-1">
+            <div><button class="btn btn-primary" onclick="ageInDayas()" style="margin-bottom: 1rem;margin-top: 1rem;">Click Me</button></div>
+            <div> <button class="btn btn-danger" onclick="reset()" style="margin-bottom: 1rem;margin-top: 1rem;">Reset</button></div>
+
+        </div>
+
+        <div class="flex-box-container-1">
+            <div id="flex-box-result"></div>
+        </div>
+
+    </div>
+
+    <div class="container-2">
+        <h2>Challenge 2:Cat generator</h2>
+        <button class="btn btn-success"  onclick="generateCate()" style="margin-top: 1rem;margin-bottom: 1rem;">Generate</button>
+        <div class="flex-box-container-2"></div>
+            <div id="flex-cat-gen"></div>
+        </div>
+
+        <div class="container-3">
+            <h2>Challenge 2:Rock Paper Scissors</h2>
+
+            <div class="flex-box-rps" id="flex-box-rps-div">
+                <img id="rock" src="static/images/rock.jpg" alt="rock" height="150px" width="150px" onclick="rps(this)">
+                <img id="paper" src="static/images/paper.png" alt="paper" height="150px" width="150px" onclick="rps(this)">
+                <img id="scissors" src="static/images/sci.jpg" alt="Scissors" height="150px" width="150px" onclick="rps(this)">
+                
+            </div>
+    </div>
+       <script src ="static/js/script.js"></script>
+</body>
+
+</html>
