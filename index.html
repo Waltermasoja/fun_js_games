@@ -12,7 +12,7 @@
 <body >
     <div class="container-1">
 
-        <h2>Challenge 1 :Your age in days</h2>
+        <h2>Calculate Your age in days</h2>
         <div class="flex-box-container-1">
             <div><button class="btn btn-primary" onclick="ageInDayas()" style="margin-bottom: 1rem;margin-top: 1rem;">Click Me</button></div>
             <div> <button class="btn btn-danger" onclick="reset()" style="margin-bottom: 1rem;margin-top: 1rem;">Reset</button></div>
@@ -26,14 +26,14 @@
     </div>
 
     <div class="container-2">
-        <h2>Challenge 2:Cat generator</h2>
+        <h2>Cat generator</h2>
         <button class="btn btn-success"  onclick="generateCate()" style="margin-top: 1rem;margin-bottom: 1rem;">Generate</button>
         <div class="flex-box-container-2"></div>
             <div id="flex-cat-gen"></div>
         </div>
 
         <div class="container-3">
-            <h2>Challenge 2:Rock Paper Scissors</h2>
+            <h2>Rock Paper Scissors</h2>
 
             <div class="flex-box-rps" id="flex-box-rps-div">
                 <img id="rock" src="static/images/rock.jpg" alt="rock" height="150px" width="150px" onclick="rps(this)">
@@ -41,6 +41,23 @@
                 <img id="scissors" src="static/images/sci.jpg" alt="Scissors" height="150px" width="150px" onclick="rps(this)">
                 
             </div>
+    </div>
+    <div class="container-4">
+        <h4 id="change-color">Change the color of all buttons</h4>
+        <div class="flex-box-changeColor">
+            <form action="">
+                <select name="back-drop" id="background" onchange="buttonColorChange(this)">
+                <option value="random" id="">Random</option>
+                <option value="red" id="Red">red</option>
+                <option value="green" id="">green</option>
+                <option value="reset" id="">Reset</option> 
+            </select>
+            </form>
+                <button class="btn btn-primary">wee!</button>
+                <button class="btn btn-danger">Yahoo</button>
+                <button class="btn btn-warning">Google</button>
+                <button class="btn btn-success">Facebook</button>
+        </div>
     </div>
        <script src ="static/js/script.js"></script>
 </body>

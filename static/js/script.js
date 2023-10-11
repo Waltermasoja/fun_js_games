@@ -60,14 +60,14 @@ function decideWinner(yourChoice,ComputerChoice){
 
 function finalMessage([yourScore,computerScore]){
     if (yourScore === 0){ 
-        return {'message':'You lost','colour':'red',}
+        return {'message':'You lost','color':'red',}
     }
     else if (yourScore === 0.5){
 
-        return {message:'you tied','colour':'yellow'}
+        return {'message':'you tied','color':'yellow'}
     }
     else{
-        return {'message':'you won','colour':'green'}}
+        return {'message':'you won!','color':'green'}}
 }
 
 function rpsFrontEnd(humanImageChoice,botImageChoice,message){
@@ -89,4 +89,30 @@ function rpsFrontEnd(humanImageChoice,botImageChoice,message){
 
      humanDiv.innerHTML = "<img src='" + imagesDatabase[humanImageChoice] + "' width =150px height = 150px style='box-shadow: 0px 10px 50px rgba(37,50,233,1) '> "
      document.getElementById('flex-box-rps-div').appendChild(humanDiv);
-}
+
+     messageDiv.innerHTML = "<h1 style ='color:"+ finalMessage['color'] +"; font-size:60px; padding:30px ;'>" + finalMessage['message'] + "</h1>";
+     document.getElementById('flex-box-rps-div').appendChild(messageDiv);
+
+     botDiv.innerHTML = "<img src='" + imagesDatabase[botImageChoice] + "' width =150px height = 150px style='box-shadow: 0px 10px 50px rgba(255,0,0,1) '> "
+     document.getElementById('flex-box-rps-div').appendChild(botDiv);
+    
+    }    
+
+    //change the colour of all the buttons
+    let all_buttons = document.getElementsByTagName('button');
+    let copy_all_buttons = []
+    for(let i =0; i < all_buttons.length;i++){
+         copy_all_buttons.push([i]);
+    }
+
+    function buttonColorChange(buttonThingy){
+       if(buttonThingy === 'red'){
+        buttonRed();
+       }
+       else if(buttonThingy === 'green'){
+        buttonGreen();
+       }
+       else{
+        buttonColorReset();
+       }
+    }
