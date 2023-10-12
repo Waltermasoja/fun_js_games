@@ -32,9 +32,7 @@ function rps(yourChoice){
     results = decideWinner(humanChoice,botChoice);
     message = finalMessage(results)
     rpsFrontEnd(humanChoice,botChoice,message);
-    console.log(humanChoice);
-    console.log(results);
-    console.log(message)
+    
 
 }
 function randToRpsInt(){
@@ -89,8 +87,8 @@ function rpsFrontEnd(humanImageChoice,botImageChoice,message){
 
      humanDiv.innerHTML = "<img src='" + imagesDatabase[humanImageChoice] + "' width =150px height = 150px style='box-shadow: 0px 10px 50px rgba(37,50,233,1) '> "
      document.getElementById('flex-box-rps-div').appendChild(humanDiv);
-
-     messageDiv.innerHTML = "<h1 style ='color:"+ finalMessage['color'] +"; font-size:60px; padding:30px ;'>" + finalMessage['message'] + "</h1>";
+     let result = finalMessage(results)
+     messageDiv.innerHTML = "<h1 style ='color:"+ result['color'] +"; font-size:60px; padding:30px ;'>" + result['message'] + "</h1>";
      document.getElementById('flex-box-rps-div').appendChild(messageDiv);
 
      botDiv.innerHTML = "<img src='" + imagesDatabase[botImageChoice] + "' width =150px height = 150px style='box-shadow: 0px 10px 50px rgba(255,0,0,1) '> "
@@ -101,18 +99,53 @@ function rpsFrontEnd(humanImageChoice,botImageChoice,message){
     //change the colour of all the buttons
     let all_buttons = document.getElementsByTagName('button');
     let copy_all_buttons = []
-    for(let i =0; i < all_buttons.length;i++){
-         copy_all_buttons.push([i]);
+    for(let i = 0; i < all_buttons.length;i++){
+         copy_all_buttons.push(all_buttons[i].classList[1]);
     }
 
-    function buttonColorChange(buttonThingy){
-       if(buttonThingy === 'red'){
-        buttonRed();
-       }
-       else if(buttonThingy === 'green'){
-        buttonGreen();
-       }
-       else{
-        buttonColorReset();
-       }
+    function buttonColorChange(btnChoice){
+
+      if(btnChoice.value === 'red'){buttonRed()
+        console.log('Changing to red');
     }
+    
+      else if(btnChoice.value === 'green'){buttonGreen()
+      }
+      else if(btnChoice.value === 'reset'){buttonReset()
+      }
+      else if(btnChoice.value === 'random'){randomBtnColour()
+      }
+    }
+
+    
+    function buttonRed() {
+        for(let i=0; i < all_buttons.length; i++) {
+            all_buttons[i].classList.remove(all_buttons[i].classList[1]);
+            all_buttons[i].classList.add('btn-danger');
+        }
+    }
+
+    function buttonGreen() {
+        for(let i=0; i < all_buttons.length; i++) {
+            all_buttons[i].classList.remove(all_buttons[i].classList[1]);
+            all_buttons[i].classList.add('btn-success');
+        }
+    }
+
+    function buttonReset() {
+        for(let i=0; i < all_buttons.length; i++) {
+            all_buttons[i].classList.remove(all_buttons[i].classList[1]);
+            all_buttons[i].classList.add(copy_all_buttons[i]);
+        }
+    }
+    
+    function randomBtnColour(){
+        let choice = ['btn-danger','btn-success','btn-warning','btn-primary']
+
+        for(let i=0; i < all_buttons.length; i++) {
+            let randChoice = Math.floor(Math.random()*4)
+            all_buttons[i].classList.remove(all_buttons[i].classList[1]);
+            all_buttons[i].classList.add(choice[randChoice]);
+        }  
+    }
+    
