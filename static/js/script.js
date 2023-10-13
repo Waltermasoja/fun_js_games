@@ -148,4 +148,19 @@ function rpsFrontEnd(humanImageChoice,botImageChoice,message){
             all_buttons[i].classList.add(choice[randChoice]);
         }  
     }
-    
+     //blackjack
+     let blackjackGame = {
+        'you':{'scoreSpan':'#your-black-jack-results','div':'#your-box','score':0},
+        'dealer':{'dealerSpan':'#dealer-black-jack-results','div':'#dealer-box','score':0
+     }
+    };
+     const You = blackjackGame['you'];
+     const Dealer = blackjackGame['dealer'];
+
+     document.querySelector('#black-jack-hitButton').addEventListener('click',blackJackHit);
+
+     function blackJackHit(){
+       let cardImage = document.createElement('img');
+       cardImage.src = 'static/images/Q.png';
+       document.querySelector(You['div']).appendChild(cardImage);
+     }
