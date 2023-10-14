@@ -18,7 +18,9 @@
     padding: 10px;
 }
 .flex-blackjack-row1,.flex-blackjack-row2{
-    background-image: url('../images/black_jack.jpg');
+    background-image: url('../images/bj_background.jpg');
+   
+    
 }
 .flex-blackjack-row1 div{
     height: 350px;
