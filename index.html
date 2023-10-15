@@ -9,13 +9,15 @@
     <link rel="stylesheet" href="static/css/styles.css">
 </head>
 
-<body >
+<body>
     <div class="container-1">
 
         <h2>Calculate Your age in days</h2>
         <div class="flex-box-container-1">
-            <div><button class="btn btn-primary" onclick="ageInDayas()" style="margin-bottom: 1rem;margin-top: 1rem;">Click Me</button></div>
-            <div> <button class="btn btn-danger" onclick="reset()" style="margin-bottom: 1rem;margin-top: 1rem;">Reset</button></div>
+            <div><button class="btn btn-primary" onclick="ageInDayas()"
+                    style="margin-bottom: 1rem;margin-top: 1rem;">Click Me</button></div>
+            <div> <button class="btn btn-danger" onclick="reset()"
+                    style="margin-bottom: 1rem;margin-top: 1rem;">Reset</button></div>
 
         </div>
 
@@ -27,60 +29,67 @@
 
     <div class="container-2">
         <h2>Cat generator</h2>
-        <button class="btn btn-success"  onclick="generateCate()" style="margin-top: 1rem;margin-bottom: 1rem;">Generate</button>
+        <button class="btn btn-success" onclick="generateCate()"
+            style="margin-top: 1rem;margin-bottom: 1rem;">Generate</button>
         <div class="flex-box-container-2"></div>
-            <div id="flex-cat-gen"></div>
+        <div id="flex-cat-gen"></div>
+    </div>
+
+    <div class="container-3">
+        <h2>Rock Paper Scissors</h2>
+
+        <div class="flex-box-rps" id="flex-box-rps-div">
+            <img id="rock" src="static/images/rock.jpg" alt="rock" height="150px" width="150px" onclick="rps(this)">
+            <img id="paper" src="static/images/paper.png" alt="paper" height="150px" width="150px" onclick="rps(this)">
+            <img id="scissors" src="static/images/sci.jpg" alt="Scissors" height="150px" width="150px"
+                onclick="rps(this)">
+
         </div>
-
-        <div class="container-3">
-            <h2>Rock Paper Scissors</h2>
-
-            <div class="flex-box-rps" id="flex-box-rps-div">
-                <img id="rock" src="static/images/rock.jpg" alt="rock" height="150px" width="150px" onclick="rps(this)">
-                <img id="paper" src="static/images/paper.png" alt="paper" height="150px" width="150px" onclick="rps(this)">
-                <img id="scissors" src="static/images/sci.jpg" alt="Scissors" height="150px" width="150px" onclick="rps(this)">
-                
-            </div>
     </div>
     <div class="container-4">
         <h4 id="change-color">Change the color of all buttons</h4>
         <div class="flex-box-changeColor">
             <form action="">
                 <select name="back-drop" id="background" onchange="buttonColorChange(this)">
-                <option value="random">Random</option>
-                <option value="red">Red</option>
-                <option value="green">Green</option>
-                <option value="reset">Reset</option> 
-            </select>
+                    <option value="random">Random</option>
+                    <option value="red">Red</option>
+                    <option value="green">Green</option>
+                    <option value="reset">Reset</option>
+                </select>
             </form>
-                <button class="btn btn-primary">wee!</button>
-                <button class="btn btn-danger">Yahoo</button>
-                <button class="btn btn-warning">Google</button>
-                <button class="btn btn-success">Facebook</button>
+            <button class="btn btn-primary">wee!</button>
+            <button class="btn btn-danger">Yahoo</button>
+            <button class="btn btn-warning">Google</button>
+            <button class="btn btn-success">Facebook</button>
         </div>
     </div>
     <div class="container-5">
         <h2>Black Jack</h2>
-        <h3><span id="Black jack results">lets Play</span></h3>
+        <h3><span id="blackjack-results">lets Play</span></h3>
 
         <div class="flex-blackjack-row1">
-            <div id="your-box"><h2>You :<span id="your-black-jack-results">0</span></h2>
+
+            <div id="your-box">
+                <h2>You :<span id="your-black-jack-results">0</span></h2>
             </div>
-                <div class="dealer-box">
-                    <h2>Dealer :<span id="dealer-black-jack-results">0</span></h2>
-                </div>
+
+            <div id="dealer-box">
+
+                <h2>Dealer :<span id="dealer-black-jack-results">0</span></h2>
+            </div>
         </div>
-        
-         <div class="flex-blackjack-row2"> 
+
+        <div class="flex-blackjack-row2">
             <div>
                 <button class="btn btn-primary" id="black-jack-hitButton">Hit</button>
                 <button class="btn btn-warning" id="black-jack-standButton">Stand</button>
                 <button class="btn btn-danger" id="black-jack-dealButton">Deal</button>
             </div>
-         </div>
-         <div class="flex-blackjack-row3">
+        </div>
+        <div class="flex-blackjack-row3">
             <table>
-                <tr> <th>Wins</th>
+                <tr>
+                    <th>Wins</th>
                     <th>Losses</th>
                     <th>Draws</th>
                 </tr>
@@ -89,12 +98,13 @@
                     <td><span id="losses">0</span></td>
                     <td><span id="draws">0</span></td>
                 </tr>
-              
+
             </table>
-         </div>
+        </div>
     </div>
-     
-       <script src ="static/js/script.js"></script>
+
+
+    <script src="static/js/script.js"></script>
 </body>
 
 </html>
