@@ -1,11 +1,22 @@
 
-
+body{
+    background-color: rgba(0, 0, 0, 0.203);
+}
+.container-0 {
+    width: 1024px;
+    text-align: center;
+    padding: auto;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
 .container-1,.container-2,.container-3,.container-4,.container-5 {
     border: 1px solid black;
     margin:0 auto;
     width: 75%;
     text-align: center;
     padding-top: 10px;
+    margin-top: 10px;
    
 }
 
